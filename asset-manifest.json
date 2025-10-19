@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/afrikreate/static/css/main.e00fa259.css",
-    "main.js": "/afrikreate/static/js/main.3b4f32e8.js",
-    "static/js/224.8ee76095.chunk.js": "/afrikreate/static/js/224.8ee76095.chunk.js",
+    "main.css": "/afrikreate/static/css/main.775db8c1.css",
+    "main.js": "/afrikreate/static/js/main.5535a09c.js",
+    "static/js/224.e13e2099.chunk.js": "/afrikreate/static/js/224.e13e2099.chunk.js",
     "static/js/453.0066a374.chunk.js": "/afrikreate/static/js/453.0066a374.chunk.js",
     "index.html": "/afrikreate/index.html",
-    "main.e00fa259.css.map": "/afrikreate/static/css/main.e00fa259.css.map",
-    "main.3b4f32e8.js.map": "/afrikreate/static/js/main.3b4f32e8.js.map",
+    "main.775db8c1.css.map": "/afrikreate/static/css/main.775db8c1.css.map",
+    "main.5535a09c.js.map": "/afrikreate/static/js/main.5535a09c.js.map",
     "453.0066a374.chunk.js.map": "/afrikreate/static/js/453.0066a374.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e00fa259.css",
-    "static/js/main.3b4f32e8.js"
+    "static/css/main.775db8c1.css",
+    "static/js/main.5535a09c.js"
   ]
 }
