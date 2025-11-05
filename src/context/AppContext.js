@@ -7,7 +7,8 @@ const initialState = {
   userPreferences: [],
   favorites: [],
   loading: false,
-  kreatives: []
+  kreatives: [],
+  rsvpEvents: []
 };
 
 // Action types
@@ -19,6 +20,8 @@ export const ActionTypes = {
   REMOVE_FAVORITE: 'REMOVE_FAVORITE',
   SET_LOADING: 'SET_LOADING',
   SET_KREATIVES: 'SET_KREATIVES',
+  ADD_RSVP: 'ADD_RSVP',
+  REMOVE_RSVP: 'REMOVE_RSVP',
   LOGOUT: 'LOGOUT'
 };
 
@@ -45,6 +48,10 @@ const appReducer = (state, action) => {
       return { ...state, loading: action.payload };
     case ActionTypes.SET_KREATIVES:
       return { ...state, kreatives: action.payload };
+    case ActionTypes.ADD_RSVP:
+      return { ...state, rsvpEvents: [...state.rsvpEvents, { ...action.payload, rsvpDate: new Date().toISOString() }] };
+    case ActionTypes.REMOVE_RSVP:
+      return { ...state, rsvpEvents: state.rsvpEvents.filter(event => event.id !== action.payload) };
     case ActionTypes.LOGOUT:
       return { 
         ...initialState, 
@@ -88,6 +95,8 @@ export const AppProvider = ({ children }) => {
     addFavorite: (kreative) => dispatch({ type: ActionTypes.ADD_FAVORITE, payload: kreative }),
     removeFavorite: (kreativeId) => dispatch({ type: ActionTypes.REMOVE_FAVORITE, payload: kreativeId }),
     setLoading: (loading) => dispatch({ type: ActionTypes.SET_LOADING, payload: loading }),
+    addRSVP: (event) => dispatch({ type: ActionTypes.ADD_RSVP, payload: event }),
+    removeRSVP: (eventId) => dispatch({ type: ActionTypes.REMOVE_RSVP, payload: eventId }),
     logout: () => dispatch({ type: ActionTypes.LOGOUT })
   };
 

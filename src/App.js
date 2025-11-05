@@ -8,6 +8,10 @@ import HomePage from './pages/HomePage';
 import ExplorePage from './pages/ExplorePage';
 import CategoryExplorePage from './pages/CategoryExplorePage';
 import ProfilePage from './pages/ProfilePage';
+import BlogPost from './pages/BlogPost';
+import EventsPage from './pages/EventsPage';
+import UserProfilePage from './pages/UserProfilePage';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -46,6 +50,22 @@ function App() {
     setSelectedArtist(null);
   };
 
+  const handleNavigateToEvents = () => {
+    setCurrentPage('events');
+  };
+
+  const handleBackFromEvents = () => {
+    setCurrentPage('home');
+  };
+
+  const handleNavigateToUserProfile = () => {
+    setCurrentPage('userProfile');
+  };
+
+  const handleBackFromUserProfile = () => {
+    setCurrentPage('home');
+  };
+
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'landing':
@@ -72,6 +92,8 @@ function App() {
             <HomePage 
               onNavigateToExplore={handleNavigateToExplore} 
               onArtistClick={handleArtistClick}
+              onNavigateToEvents={handleNavigateToEvents}
+              onNavigateToUserProfile={handleNavigateToUserProfile}
             />
           </PageTransition>
         );
@@ -96,6 +118,22 @@ function App() {
             <ProfilePage 
               kreative={selectedArtist}
               onBack={handleBackToCategoryExplore}
+            />
+          </PageTransition>
+        );
+      case 'events':
+        return (
+          <PageTransition isActive={true} transitionKey="events">
+            <EventsPage 
+              onBack={handleBackFromEvents}
+            />
+          </PageTransition>
+        );
+      case 'userProfile':
+        return (
+          <PageTransition isActive={true} transitionKey="userProfile">
+            <UserProfilePage 
+              onBack={handleBackFromUserProfile}
             />
           </PageTransition>
         );

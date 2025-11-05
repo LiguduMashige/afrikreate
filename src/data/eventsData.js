@@ -1,0 +1,80 @@
+export const eventsData = [
+  {
+    id: 1,
+    title: "Cape Town Art Fair 2025",
+    date: "2025-02-14",
+    time: "10:00 AM",
+    location: "Cape Town International Convention Centre",
+    city: "Cape Town",
+    category: "Art Exhibition",
+    description: "South Africa's premier contemporary art fair showcasing local and international artists.",
+    image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800",
+    price: "Free",
+    organizer: "Cape Town Art Fair"
+  },
+  {
+    id: 2,
+    title: "Johannesburg Photography Workshop",
+    date: "2025-02-20",
+    time: "2:00 PM",
+    location: "Market Photo Workshop",
+    city: "Johannesburg",
+    category: "Photography",
+    description: "Learn advanced photography techniques from award-winning South African photographers.",
+    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800",
+    price: "R500",
+    organizer: "Market Photo Workshop"
+  },
+  {
+    id: 3,
+    title: "Durban Music & Arts Festival",
+    date: "2025-03-05",
+    time: "6:00 PM",
+    location: "Moses Mabhida Stadium",
+    city: "Durban",
+    category: "Music",
+    description: "A celebration of South African music, featuring local artists and performers.",
+    image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800",
+    price: "R350",
+    organizer: "Durban Arts Council"
+  },
+  {
+    id: 4,
+    title: "Design Indaba Conference",
+    date: "2025-03-15",
+    time: "9:00 AM",
+    location: "Artscape Theatre Centre",
+    city: "Cape Town",
+    category: "Design",
+    description: "Africa's premier design conference bringing together creative minds from around the world.",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800",
+    price: "R2500",
+    organizer: "Design Indaba"
+  },
+  {
+    id: 5,
+    title: "Pretoria Craft Market",
+    date: "2025-02-28",
+    time: "8:00 AM",
+    location: "Hazel Food Market",
+    city: "Pretoria",
+    category: "Crafts",
+    description: "Discover unique handmade crafts and artworks by local South African artisans.",
+    image: "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=800",
+    price: "Free",
+    organizer: "Hazel Food Market"
+  },
+  {
+    id: 6,
+    title: "African Film Festival",
+    date: "2025-04-10",
+    time: "7:00 PM",
+    location: "The Bioscope Independent Cinema",
+    city: "Johannesburg",
+    category: "Film",
+    description: "Showcasing the best of African cinema with screenings and filmmaker Q&As.",
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
+    price: "R150",
+    organizer: "African Film Festival"
+  }
+];

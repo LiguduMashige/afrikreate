@@ -5,7 +5,7 @@ import BackgroundAnimations from '../components/BackgroundAnimations';
 import { blogContent } from '../data/blogContent';
 import './HomePage.css';
 
-const HomePage = ({ onNavigateToExplore, onArtistClick }) => {
+const HomePage = ({ onNavigateToExplore, onArtistClick, onNavigateToEvents, onNavigateToUserProfile }) => {
   const { state, actions } = useAppContext();
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
   const [categories, setCategories] = useState([]);
@@ -100,8 +100,9 @@ const HomePage = ({ onNavigateToExplore, onArtistClick }) => {
           
           <nav className="main-nav">
             <button className="nav-btn" onClick={onNavigateToExplore}>Explore</button>
-            <button className="nav-btn">Favourites</button>
-            <button className="nav-btn">Profile</button>
+            <button className="nav-btn" onClick={onNavigateToEvents}>Events</button>
+            <button className="nav-btn" onClick={() => alert('Favourites feature coming soon!')}>Favourites</button>
+            <button className="nav-btn" onClick={onNavigateToUserProfile}>Profile</button>
           </nav>
         </div>
       </header>
